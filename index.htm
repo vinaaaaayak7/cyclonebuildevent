@@ -166,14 +166,12 @@
     <div id="infoPage" class="page active">
       <h1>🌪️ Cyclone SMP Build Event</h1>
       <p class="subtitle">Hosted by Cyclone SMP</p>
-      <p>Read all info & Scroll to bottom to unlock registration 👇</p>
       <div class="info-content" id="infoScrollBox">
         <p>🧱 Show your creativity and building skills in our epic SMP Build Event!</p>
         <p>🏆 Winner gets an exclusive in-game reward and Discord role.</p>
-        <p>📅 Date: 3rd of August 2025</p>
-        <p>⏰ Time : 12:00 am to 5:00 am </p>
-        <p>⏰ Time Limit: 5 Hours</p>
-        <p>🎨 Theme: No theme just pure creativity and (nature things bhi add kr sakte ho</p>
+        <p>📅 Date: 15th August 2025</p>
+        <p>⏰ Time Limit: 3 Hours</p>
+        <p>🎨 Theme: Nature + Fantasy</p>
         <p>📌 Rules:</p>
         <ul>
           <li>Solo participation only</li>
@@ -184,12 +182,13 @@
         <div class="rewards">
           <h3>🏆 Winner Rewards</h3>
           <ul>
-            <li><strong>🥇 1st Rank:</strong> ₹200 Cash (Online Payment)</li>
+            <li><strong>🥇 1st Rank:</strong> ₹250 Cash (Online Payment)</li>
             <li><strong>🥈 2nd Rank:</strong> ₹100 Cash</li>
-            <li><strong>🥉 3rd Rank:</strong> ₹50 + King Rank for 1 Week</li>
+            <li><strong>🥉 3rd Rank:</strong> ₹50 + Special Rank for 1 Week</li>
           </ul>
         </div>
         <p style="margin-top: 20px;">💬 Contact staff if you have any questions!</p>
+        <p>Scroll to bottom to unlock registration 👇</p>
       </div>
       <button id="registerBtn" class="hidden-btn" onclick="showForm()">🚀 Register Now</button>
     </div>
@@ -201,7 +200,7 @@
         <input type="text" id="username" placeholder="Your Name / Discord Username" required />
         <input type="text" id="ign" placeholder="Minecraft IGN" required />
         <input type="number" id="age" placeholder="Your Age" required />
-        <textarea id="Country name" placeholder="Country Name ? . eg India" rows="4" required></textarea>
+        <input type="text" id="country" placeholder="Your Country" required />
         <button type="submit">✅ Submit</button>
       </form>
       <button style="margin-top: 15px;" onclick="showInfo()">← Back to Info</button>
@@ -240,7 +239,7 @@
       const username = document.getElementById("username").value;
       const ign = document.getElementById("ign").value;
       const age = document.getElementById("age").value;
-      const reason = document.getElementById("reason").value;
+      const country = document.getElementById("country").value;
 
       const payload = {
         content: "**New Build Event Registration!**",
@@ -252,7 +251,7 @@
               { name: "Username", value: username, inline: true },
               { name: "Minecraft IGN", value: ign, inline: true },
               { name: "Age", value: age, inline: true },
-              { name: "Country name", value: reason }
+              { name: "Country", value: country }
             ],
             footer: { text: "Cyclone SMP Registration System" },
             timestamp: new Date()
