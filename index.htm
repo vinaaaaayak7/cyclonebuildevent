@@ -3,283 +3,61 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Cyclone SMP Build Event</title>
-
+  <title>Build Event Closed - Cyclone SMP</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
   <style>
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
     }
 
     body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      height: 100vh;
       background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: white;
-      min-height: 100vh;
       display: flex;
       justify-content: center;
       align-items: center;
+      color: #fff;
+      text-align: center;
       padding: 20px;
-      overflow-x: hidden;
     }
 
     .container {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 30px;
-      border-radius: 12px;
-      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 40px;
+      border-radius: 20px;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.5);
       max-width: 500px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+      width: 100%;
+      animation: fadeIn 1s ease-in-out;
     }
 
     h1 {
-      text-align: center;
-      color: #00c3ff;
-      font-size: 24px;
-    }
-
-    .subtitle {
-      text-align: center;
+      font-size: 2.8rem;
+      color: #ffcc00;
       margin-bottom: 20px;
-      font-size: 14px;
-      color: #ccc;
     }
 
-    .info-content {
-      font-size: 15px;
+    p {
+      font-size: 1.2rem;
       line-height: 1.6;
-      margin-bottom: 25px;
-      max-height: 250px;
-      overflow-y: auto;
-      padding-right: 5px;
     }
 
-    .rewards {
-      background: rgba(0, 255, 174, 0.1);
-      padding: 20px;
-      border-radius: 12px;
-      margin-top: 20px;
-      border-left: 4px solid #00ffae;
-      box-shadow: 0 0 10px rgba(0, 255, 174, 0.3);
-    }
-
-    .rewards h3 {
-      margin-bottom: 15px;
-      font-size: 20px;
-      color: #00ffae;
-      font-weight: bold;
-    }
-
-    .rewards ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    .rewards li {
-      padding: 10px 0;
-      font-size: 16px;
-      color: #fff;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .rewards li:last-child {
-      border-bottom: none;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      border: none;
-      border-radius: 8px;
-      font-size: 15px;
-    }
-
-    button {
-      margin-top: 10px;
-      padding: 14px;
-      font-size: 16px;
-      background-color: #00c3ff;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background 0.3s ease;
-      width: 100%;
-    }
-
-    button:hover {
-      background-color: #009cc6;
-    }
-
-    .footer {
-      text-align: center;
-      margin-top: 20px;
-      font-size: 13px;
-      color: #aaa;
-    }
-
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .page {
-      display: none;
-    }
-
-    .page.active {
-      display: block;
-    }
-
-    .hidden-btn {
-      display: none;
-      opacity: 0;
-      transition: opacity 0.5s ease;
-    }
-
-    .visible-btn {
-      display: block;
-      opacity: 1;
-    }
-
-    @media screen and (max-width: 480px) {
-      .container {
-        padding: 20px;
-      }
-
-      h1 {
-        font-size: 20px;
-      }
-
-      button {
-        font-size: 15px;
-        padding: 12px;
-      }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <!-- Page 1: Info -->
-    <div id="infoPage" class="page active">
-      <h1>2 seats remain</h1>
-      <h1>🌪️ Cyclone SMP Build Event</h1>
-      <p class="subtitle">Hosted by Cyclone SMP</p>
-      <p>Read all info & Scroll to bottom to unlock registration 👇</p>
-      <div class="info-content" id="infoScrollBox">
-        <p>🧱 Show your creativity and building skills in our epic SMP Build Event!</p>
-        <p>🏆 Winner gets an exclusive real life money reward and Discord role.</p>
-        <p>📅 Date: 3rd of August 2025</p>
-        <p>⏰ Time Limit: 5 Hours 12 pm to 5 pm</p>
-        <p>🎨 Theme: Random Build what u want but also include nature in it </p>
-        <p>📌 Rules:</p>
-        <ul>
-          <li>Solo participation only</li>
-          <li>No external building mods or hacks</li>
-          <li>Judging based on creativity & detail</li>
-          <li>Respect staff and other players</li>
-          <li>Game Mode Creative</li>
-        </ul>
-        <div class="rewards">
-          <h3>🏆 Winner Rewards</h3>
-          <ul>
-            <li><strong>🥇 1st Rank:</strong> ₹250 Cash (Online Payment)</li>
-            <li><strong>🥈 2nd Rank:</strong> ₹100 Cash</li>
-            <li><strong>🥉 3rd Rank:</strong> ₹50 + Special Rank for 1 Week</li>
-          </ul>
-        </div>
-        <p style="margin-top: 20px;">💬 Contact staff if you have any questions!</p>
-      </div>
-      <button id="registerBtn" class="hidden-btn" onclick="showForm()">🚀 Register Now</button>
-    </div>
-
-    <!-- Page 2: Form -->
-    <div id="formPage" class="page">
-      <h1>📝 Registration Form</h1>
-      <form id="registrationForm">
-        <input type="text" id="username" placeholder="Your Name / Discord Username" required />
-        <input type="text" id="ign" placeholder="Minecraft IGN" required />
-        <input type="number" id="age" placeholder="Your Age" required />
-        <input type="text" id="country" placeholder="Your Country" required />
-        <button type="submit">✅ Submit</button>
-      </form>
-      <button style="margin-top: 15px;" onclick="showInfo()">← Back to Info</button>
-    </div>
-
-    <p class="footer">Made with ❤️ by Cyclone SMP</p>
+    <h1>🚫 Registration Closed</h1>
+    <p>✅ Cyclone SMP Build Event registration is now closed.</p>
+    <p>🕛 Event starts at <strong>12:00 PM</strong></p>
+    <p>🎮 Be available on time and enjoy the event!</p>
   </div>
-
-  <script>
-    const webhookURL = "https://discord.com/api/webhooks/1400045976214966333/ZwXwkS88eCuMAjywbYqcd7k3R2jBiHjbIhXEG6Z90_GTwBdZKy5p3aRwY0I0Kf4bi6TO";
-    const infoPage = document.getElementById("infoPage");
-    const formPage = document.getElementById("formPage");
-    const infoScrollBox = document.getElementById("infoScrollBox");
-    const registerBtn = document.getElementById("registerBtn");
-
-    function showForm() {
-      infoPage.classList.remove("active");
-      formPage.classList.add("active");
-    }
-
-    function showInfo() {
-      formPage.classList.remove("active");
-      infoPage.classList.add("active");
-    }
-
-    infoScrollBox.addEventListener("scroll", () => {
-      if (infoScrollBox.scrollTop + infoScrollBox.clientHeight >= infoScrollBox.scrollHeight - 5) {
-        registerBtn.classList.remove("hidden-btn");
-        registerBtn.classList.add("visible-btn");
-      }
-    });
-
-    document.getElementById("registrationForm").addEventListener("submit", function (e) {
-      e.preventDefault();
-
-      const username = document.getElementById("username").value;
-      const ign = document.getElementById("ign").value;
-      const age = document.getElementById("age").value;
-      const country = document.getElementById("country").value;
-
-      const payload = {
-        content: "**New Build Event Registration!**",
-        embeds: [
-          {
-            title: "🌟 Cyclone SMP Build Event Entry",
-            color: 3447003,
-            fields: [
-              { name: "Username", value: username, inline: true },
-              { name: "Minecraft IGN", value: ign, inline: true },
-              { name: "Age", value: age, inline: true },
-              { name: "Country", value: country }
-            ],
-            footer: { text: "Cyclone SMP Registration System" },
-            timestamp: new Date()
-          }
-        ]
-      };
-
-      fetch(webhookURL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload)
-      })
-      .then(response => {
-        if (response.ok) {
-          alert("✅ Registration Submitted Successfully!");
-          document.getElementById("registrationForm").reset();
-          showInfo();
-        } else {
-          alert("❌ Failed to submit. Please try again later.");
-        }
-      })
-      .catch(error => {
-        console.error("Error:", error);
-        alert("⚠️ Error submitting the form.");
-      });
-    });
-  </script>
 </body>
 </html>
+              
